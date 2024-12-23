@@ -13,6 +13,13 @@ php artisan make:migration create_contact_interest_center_table --create=contact
 
 php artisan make:migration create_company_contact_table
 
+php artisan make:migration create_projects_table
+
+php artisan make:migration create_project_contact_company_table
+
+php artisan make:migration create_project_user_table
+
+
 ```
 
 - With this pivot table, you can easily manage the "many-to-many" relationship between contacts and companies in your Laravel models:
