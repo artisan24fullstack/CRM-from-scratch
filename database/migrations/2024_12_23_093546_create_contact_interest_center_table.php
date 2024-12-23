@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('interest_centers', function (Blueprint $table) {
+        Schema::create('contact_interest_center', function (Blueprint $table) {
             $table->id();
-            $table->string('interest_center', 80);
+            $table->foreignId('contact_id')->constrained()->onDelete('cascade');
+            $table->foreignId('interest_center_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -23,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('interest_centers');
+        Schema::dropIfExists('contact_interest_center');
     }
 };

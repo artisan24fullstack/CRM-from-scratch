@@ -25,15 +25,13 @@ return new class extends Migration
             $table->string('mobile_phone', 20)->nullable();
             $table->string('personal_email', 20)->nullable();
             $table->string('contact_website')->nullable();
-            $table->text('center_of_interest')->nullable();
+            //$table->text('center_of_interest')->nullable();
             $table->text('note')->nullable();
             $table->date('date_of_birth')->nullable();
             $table->timestamps();
 
             $table->foreignId('user_id')->nullable()->constrained()->onDelete('set null');
             $table->foreignId('address_id')->nullable()->constrained()->onDelete('cascade');
-
-            $table->foreignId('interest_center_id')->constrained()->onDelete('cascade');
 
         });
     }
