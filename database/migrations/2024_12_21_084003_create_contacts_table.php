@@ -18,12 +18,12 @@ return new class extends Migration
             //$table->string('fullname')->nullable();
             $table->string('professional_email', 100)->unique();
             $table->string('professional_phone', 20);
+            $table->string('personal_email', 100)->nullable();
             $table->string('linkedin_url');
             $table->string('facebook_url')->nullable();
-            $table->string('title', length: 50)->nullable();
+            //$table->string('title', length: 50)->nullable();
             //$table->enum('gender', array_column(GenderType::cases(), 'value'));
             $table->string('mobile_phone', 20)->nullable();
-            $table->string('personal_email', 20)->nullable();
             $table->string('contact_website')->nullable();
             //$table->text('center_of_interest')->nullable();
             $table->text('note')->nullable();
