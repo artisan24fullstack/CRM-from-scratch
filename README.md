@@ -19,6 +19,7 @@ php artisan make:migration create_project_contact_company_table
 
 php artisan make:migration create_project_user_table
 
+php artisan make:migration create_interactions_table
 
 ```
 
